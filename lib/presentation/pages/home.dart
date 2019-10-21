@@ -30,6 +30,7 @@ class MyHomePage extends StatelessWidget {
       );
     }
 
+    ///Catalog
     Widget _myRouteGroupToExpansionTile(MyRouteGroup myRouteGroup) {
       return Card(
         child: ExpansionTile(
@@ -43,6 +44,7 @@ class MyHomePage extends StatelessWidget {
       );
     }
 
+    ///Bookmarks
     Widget _buildBookmarksExpansionTile() {
       final settings = Provider.of<MyAppSettings>(context);
       MyRouteGroup starredGroup = MyRouteGroup(
@@ -53,6 +55,7 @@ class MyHomePage extends StatelessWidget {
       return _myRouteGroupToExpansionTile(starredGroup);
     }
 
+    ///ListView(BookMarks, kMyAppRoutesStructure, kAboutRoute)
     return ListView(
       children: <Widget>[
         _buildBookmarksExpansionTile(),

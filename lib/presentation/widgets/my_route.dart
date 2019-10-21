@@ -64,8 +64,8 @@ class MyRoute extends StatelessWidget {
       iconPosition: BackdropIconPosition.action,
       headerHeight: headerHeight,
 
-      //Builder(): A platonic widget that calls a closure to obtain its child widget.
       ///FrontLayer List (Flutter Catalog)
+      //Builder(): A platonic widget that calls a closure to obtain its child widget.
       frontLayer: Builder(
         builder: (BuildContext context) => WidgetWithCodeView(
           child: this.child,
@@ -88,7 +88,7 @@ class MyRoute extends StatelessWidget {
     );
   }
 
-
+  ///AppBar
   List<Widget> _getAppbarActions(BuildContext context) {
     final settings = Provider.of<MyAppSettings>(context);
     return <Widget>[
@@ -116,7 +116,7 @@ class MyRoute extends StatelessWidget {
     ];
   }
 
-
+  ///BackLayer List (Options)
   ListView _getBackdropListTiles() {
     return ListView(
       padding: EdgeInsets.only(bottom: 32.0),

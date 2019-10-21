@@ -33,6 +33,14 @@ allprojects {
         google()
         jcenter()
     }
+    ///Esto fue lo que agregue
+    // Add the "force" resulation strategy to fix problems building the app.
+    // Cf. https://stackoverflow.com/a/52962449.
+    configurations.all {
+        resolutionStrategy.force 'androidx.exifinterface:exifinterface:1.0.0'
+
+    }
+    ///hasta aca
 }
 
 rootProject.buildDir = '../build'
